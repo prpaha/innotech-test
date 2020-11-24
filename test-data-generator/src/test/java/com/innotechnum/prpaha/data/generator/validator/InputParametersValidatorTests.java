@@ -21,6 +21,30 @@ public class InputParametersValidatorTests {
     }
 
     @Test
+    public void moreCountInputParametersTest() {
+        String[] args = new String[] {"", "", "", ""};
+        InputParametersValidator validator = new InputParametersValidator(args);
+        try {
+            validator.validate();
+            Assert.fail("More input parameters");
+        } catch (IllegalArgumentException e) {
+
+        }
+    }
+
+    @Test
+    public void  lessCountInputParametersTest() {
+        String[] args = new String[] {"", ""};
+        InputParametersValidator validator = new InputParametersValidator(args);
+        try {
+            validator.validate();
+            Assert.fail("Less input parameters");
+        } catch (IllegalArgumentException e) {
+
+        }
+    }
+
+    @Test
     public void nullFirstInputParametersTest() {
         String[] args = new String[] {null, "100", "test"};
         InputParametersValidator validator = new InputParametersValidator(args);
