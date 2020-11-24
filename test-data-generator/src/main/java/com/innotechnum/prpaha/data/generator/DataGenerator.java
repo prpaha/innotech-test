@@ -1,4 +1,4 @@
-package com.innotechnum.prpaha.data.generator.services;
+package com.innotechnum.prpaha.data.generator;
 
 /**
  * Генератор данных.

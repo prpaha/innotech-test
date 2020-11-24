@@ -1,6 +1,6 @@
 package com.innotechnum.prpaha.data.generator;
 
-import com.innotechnum.prpaha.data.generator.services.DataGenerator;
+import com.google.inject.Guice;
 import com.innotechnum.prpaha.data.generator.validator.InputParametersValidator;
 
 /**
@@ -36,14 +36,15 @@ public class Application {
     }
 
     /**
-     * Запускаем генерацию тестовых данных
+     * Запускаем генерацию тестовых данных.
      */
     private void generateTestData() {
         String inputFile = args[0];
         int operationCount = Integer.parseInt(args[1]);
         String outputFile = args[2];
 
-        DataGenerator generator = DataGeneratorFactory.getDataGenerator(inputFile, operationCount, outputFile);
+        DataGenerator generator = DataGeneratorFactory.getDataGenerator(inputFile, operationCount, outputFile,
+                Guice.createInjector(new ServicesModule()));
         generator.generate();
     }
 

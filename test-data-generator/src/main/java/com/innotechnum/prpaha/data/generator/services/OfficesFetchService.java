@@ -14,4 +14,10 @@ public interface OfficesFetchService {
      */
     Office getRandomOffice();
 
+    /**
+     * Выборка коллекции офисов.
+     *
+     * @param inputFile файл с офисами
+     */
+    void fetchOffices(String inputFile);
 }

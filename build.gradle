@@ -6,9 +6,13 @@ plugins {
 ext {
     jUnitVersion = '4.12'
     guiceVersion = '4.2.0'
+    commonsLangVarsion = '3.11'
+    mockitoVersion = '3.5.10'
     libs = [
             junit: "junit:junit:${jUnitVersion}",
-            guice: "com.google.inject:guice:${guiceVersion}"
+            guice: "com.google.inject:guice:${guiceVersion}",
+            commonsLang: "org.apache.commons:commons-lang3:${commonsLangVarsion}",
+            mockitoCore: "org.mockito:mockito-core:${mockitoVersion}"
     ]
 }
 

@@ -92,4 +92,16 @@ public class InputParametersValidatorTests {
         }
     }
 
+    @Test
+    public void countIntegerIsPositiveInputParameterTest() {
+        String[] args = new String[] {"test", "-100", "test"};
+        InputParametersValidator validator = new InputParametersValidator(args);
+        try {
+            validator.validate();
+            Assert.fail("Integer in second input parameters is not positive");
+        } catch (IllegalArgumentException e) {
+
+        }
+    }
+
 }

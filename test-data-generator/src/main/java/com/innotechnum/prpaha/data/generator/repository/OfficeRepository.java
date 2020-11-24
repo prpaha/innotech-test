@@ -16,4 +16,10 @@ public interface OfficeRepository {
      */
     Collection<Office> getAllOffices();
 
+    /**
+     * Инициализация репозитория офисов.
+     *
+     * @param inputFile путь до файла с офисами
+     */
+    void init(String inputFile);
 }

@@ -1,6 +1,4 @@
-package com.innotechnum.prpaha.data.generator.services;
-
-import com.google.inject.Inject;
+package com.innotechnum.prpaha.data.generator;
 
 /**
  * Генератор тестовых данных.
@@ -13,9 +11,6 @@ public class LargeDataGenerator implements DataGenerator {
     private final int operationCount;
     private final String outputFile;
 
-    @Inject
-    private OfficesFetchService officesFetchService;
-
     public LargeDataGenerator(final String inputFile, final int operationCount, final String outputFile) {
         this.inputFile = inputFile;
         this.operationCount = operationCount;
@@ -23,7 +18,7 @@ public class LargeDataGenerator implements DataGenerator {
     }
 
     public void generate() {
-
+        throw new RuntimeException("Не реализованно для больших данных. Уменьшите количество операций и попробуйте снова.");
     }
 
 }

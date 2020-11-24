@@ -22,10 +22,14 @@ public class InputParametersValidator {
                 throw new IllegalArgumentException("NULL one of input parameters");
             }
         }
+        int count;
         try {
-            Integer.parseInt(args[1]);
+            count = Integer.parseInt(args[1]);
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException("Count is not integer");
+        }
+        if (count < 0) {
+            throw new IllegalArgumentException("Count is not positive");
         }
     }
 

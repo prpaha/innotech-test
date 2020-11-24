@@ -4,6 +4,8 @@ plugins {
 
 dependencies {
     implementation libs.guice
+    implementation libs.commonsLang
 
     testImplementation libs.junit
+    testImplementation libs.mockitoCore
 }
