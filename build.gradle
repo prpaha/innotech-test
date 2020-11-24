@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id "io.freefair.lombok" version "5.2.1"
+}
+
+ext {
+    jUnitVersion = '4.12'
+    guiceVersion = '4.2.0'
+    libs = [
+            junit: "junit:junit:${jUnitVersion}",
+            guice: "com.google.inject:guice:${guiceVersion}"
+    ]
+}
+
+allprojects {
+    apply plugin: 'io.freefair.lombok'
+
+    group = 'com.innotechnum.prpaha'
+    version = '0.0.1'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}

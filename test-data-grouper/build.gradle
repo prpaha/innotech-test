@@ -3,7 +3,5 @@ plugins {
 }
 
 dependencies {
-    implementation libs.guice
-
     testImplementation libs.junit
 }
