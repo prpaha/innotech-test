@@ -78,7 +78,7 @@ public class SmallDataGenerator extends AbstractDataGenerator implements DataGen
     }
 
     private Operation generateOperation(int index) {
-        return new Operation(index, officesFetchService.getRandomOffice(),
+        return new Operation(index + 1, officesFetchService.getRandomOffice(),
                 getRandomDate(), getRandomAmount());
     }
 
